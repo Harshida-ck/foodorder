@@ -50,11 +50,11 @@ li a:hover {
     align-items: center;
 }
 
-.origins{
+.origins {
     flex: 9;
 }
 
-.origins span{
+.origins span {
     border-radius: 2rem;
     background-color: whitesmoke;
     color: gray;
@@ -63,13 +63,13 @@ li a:hover {
     display: inline-block;
 }
 
-.cook-time{
+.cook-time {
     font-size: 0.8rem;
     flex: 3;
     text-align: center;
 }
 
-.price{
+.price {
     color: #424242;
     margin-top: 0.2rem;
 }

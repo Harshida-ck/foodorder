@@ -9,8 +9,12 @@ export class FoodService {
 
   constructor() { }
 
+  getFoodById(id: number): Foods {
+    return this.getAll().find(food => food.id == id)!
+  }
+
   getAllFoodsByTag(tag: string): Foods[] {
-   return tag == 'All' ? this.getAll() : this.getAll().filter(food => food.tags?.includes(tag))
+    return tag == 'All' ? this.getAll() : this.getAll().filter(food => food.tags?.includes(tag))
   }
 
   getAll(): Foods[] {
@@ -54,7 +58,7 @@ export class FoodService {
         price: 200,
         favourite: false,
         star: 4,
-        tags: [ 'Waffles', 'Breakfast'],
+        tags: ['Waffles', 'Breakfast'],
         imageUrl: '/assets/food-4.jpeg',
         cookTime: '10-15',
         origins: ['Belgium']
@@ -65,7 +69,7 @@ export class FoodService {
         price: 200,
         favourite: false,
         star: 4,
-        tags: [ 'Pancake', 'Breakfast'],
+        tags: ['Pancake', 'Breakfast'],
         imageUrl: '/assets/food-5.jpeg',
         cookTime: '10-15',
         origins: ['Greece']
@@ -76,7 +80,7 @@ export class FoodService {
         price: 150,
         favourite: false,
         star: 4,
-        tags: [ 'Mojito', 'Drink'],
+        tags: ['Mojito', 'Drink'],
         imageUrl: '/assets/food-6.jpeg',
         cookTime: '15-20',
         origins: ['Cuba']
@@ -98,7 +102,7 @@ export class FoodService {
         price: 100,
         favourite: false,
         star: 4,
-        tags: [ 'Juice', 'Drink'],
+        tags: ['Juice', 'Drink'],
         imageUrl: '/assets/food-8.jpeg',
         cookTime: '5-10',
         origins: ['Italy']
@@ -106,22 +110,22 @@ export class FoodService {
     ];
   }
 
-  getAllTag():Tag[]{
+  getAllTag(): Tag[] {
     return [
-      { name: 'All', count: 20},
-      { name: 'FastFood', count: 4},
-      { name: 'Pizza', count: 1},
-      { name: 'Burger', count: 1},
-      { name: 'Sandwich', count: 1},
-      { name: 'Waffles', count: 1},
-      { name: 'Pancake', count: 1}, 
-      { name: 'LoadedFries', count: 1},
-      { name: 'Juice', count: 1},
-      { name: 'Mojito', count: 1},
-      { name: 'Lunch', count: 3},
-      { name: 'Breakfast', count: 2},
-      { name: 'Drink', count: 2},
-      { name: 'Snack', count: 1}
+      { name: 'All', count: 20 },
+      { name: 'FastFood', count: 4 },
+      { name: 'Pizza', count: 1 },
+      { name: 'Burger', count: 1 },
+      { name: 'Sandwich', count: 1 },
+      { name: 'Waffles', count: 1 },
+      { name: 'Pancake', count: 1 },
+      { name: 'LoadedFries', count: 1 },
+      { name: 'Juice', count: 1 },
+      { name: 'Mojito', count: 1 },
+      { name: 'Lunch', count: 3 },
+      { name: 'Breakfast', count: 2 },
+      { name: 'Drink', count: 2 },
+      { name: 'Snack', count: 1 }
     ]
   }
 
